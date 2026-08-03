@@ -12,7 +12,7 @@ make run ARGS="ls"  # or: make dev ARGS="search frontend"
 
 Equivalent without Make: `go build -o bin/tether ./cmd/tether` and `go test ./...`.
 
-No CI, no linter config. `mise.toml` only pins `go = "latest"`. See `make help` for all targets (`vet`, `tidy`, `install`, `clean`).
+CI: `.github/workflows/ci.yml` (vet/test/build). Releases: `.github/workflows/release.yml` + `.goreleaser.yaml` (tag `v*`). `mise.toml` only pins `go = "latest"`. See `make help` for all targets (`vet`, `tidy`, `install`, `clean`).
 
 ## Architecture
 
